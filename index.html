@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web To Lead</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+     <h1>Your.. Information</h1>
+    
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dak000003ZkHa" method="POST" 
+       name="form1" onsubmit="leadDate()" >
+    
+    <input type=hidden name="oid" value="00Dak000003ZkHa">
+    <input type=hidden name="retURL" value="">
+    <input type="hidden" name="Lead_Date__c" class="outputdate">
+    
+     
+    
+    <label for="first_name">First Name</label>
+    <input  id="first_name" required="true" maxlength="40" name="first_name" size="20" type="text" /><br>
+    
+    <label for="last_name">Last Name</label>
+    <input  id="last_name" required="true" maxlength="80" name="last_name" size="20" type="text" /><br>
+    
+    <label for="email">Email</label>
+    <input  id="email" required="true" maxlength="80" name="email" size="20" type="text" /><br>
+    
+    <label for="mobile">Mobile</label>
+    <input  id="mobile" required="true" maxlength="40" name="mobile" size="20" type="text" /><br>
+
+    <label for="Lead_Date__c">Lead Date</label>
+    <input required="true" type="date" class="inputdate">
+    
+    <input type="submit" name="submit" class="submit" onclick="validateEmail(document.form1.email)">
+    
+    </form>
+     
+</body>
+</html>
